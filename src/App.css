@@ -27,15 +27,28 @@ li {
   color: white;
 }
 
-.titleWrapper {
-  background-color: white;
+.pageWrapper {
   width: 100vw;
-  min-height: 45%;
-  padding-bottom: 20%;
+}
+
+.titleBackground {
+  height: 30%;
+  padding-bottom: 15%;
   background-image: url("title-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  /* height: 500px; */
+  margin-inline: 15%;
+  background-color: brown;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .title {
@@ -44,7 +57,6 @@ li {
   font-weight: bold;
   font-size: 40px;
   padding-top: 30px;
-  margin-left: 20%;
 }
 
 .subtitle {
@@ -52,22 +64,79 @@ li {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   font-size: 20px;
-  margin-left: 20%;
+  background-color: red;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.navBarWrapper {
-  flex-direction: column;
+.buttonWrapper {
+  display: flex;
 }
 
 .button {
-  background-color: aquamarine;
+  background-color: cadetblue;
   border-radius: 10px;
-  border-width: 1px;
-  border-color: black;
-  padding-inline: 10px;
-  padding-block: 5px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .button:hover {
-  cursor: pointer;
+  background-color: rgb(80, 134, 136);
+}
+
+.featuredWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardWrapper {
+  background-color: azure;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: black;
+  margin: 1rem;
+  width: 300px;
+  height: 320px;
+  transition: transform 200ms ease-in-out;
+}
+
+.cardWrapper:hover {
+  transform: scale(1.1) translateY(-1rem);
+}
+
+.cardImage {
+  object-fit: cover;
+  height: 185px;
+  width: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.detailsWrapper {
+  /* background-color: gray; */
+  margin-inline: 0.5rem;
+}
+
+.priceWrapper {
+  /* background-color: red; */
+  padding-block: 0.3rem;
+  justify-content: flex-end;
+  margin-inline: 0.5rem;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.searchOptionsWrapper {
+  background-color: red;
+}
+
+.searchCardsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
