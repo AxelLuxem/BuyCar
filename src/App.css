@@ -32,23 +32,28 @@ li {
 }
 
 .titleBackground {
-  height: 30%;
+  height: 280px;
   padding-bottom: 15%;
   background-image: url("title-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
 }
 
 .titleSection {
   display: flex;
   flex-direction: column;
   align-content: space-around;
-  /* height: 500px; */
-  margin-inline: 15%;
-  background-color: brown;
-  padding-left: 30px;
-  padding-right: 30px;
+  position: absolute;
+  width: 50%;
+  top: 5%;
+  left: 5%;
+  transform: translate(5%, 0%);
+  /* background-color: brown; */
+  padding-inline: 15%;
+  padding-block: 5%;
 }
 
 .title {
@@ -64,7 +69,7 @@ li {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   font-size: 20px;
-  background-color: red;
+  /* background-color: red; */
   flex-wrap: wrap;
   margin-top: 30px;
 }
@@ -79,6 +84,9 @@ li {
   padding: 15px;
   margin-top: 20px;
   margin-bottom: 30px;
+  height: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
 
 .button:hover {
@@ -100,10 +108,13 @@ li {
   width: 300px;
   height: 320px;
   transition: transform 200ms ease-in-out;
+  box-shadow: -7px 10px 20px rgb(0, 0, 0);
+  text-align: left;
 }
 
 .cardWrapper:hover {
   transform: scale(1.1) translateY(-1rem);
+  cursor: pointer;
 }
 
 .cardImage {
@@ -139,4 +150,21 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.loginPageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputBox {
+  background-color: white;
+  padding-inline: 5px;
+  padding-block: 10px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  height: 25px;
+  width: 270px;
 }

@@ -4,6 +4,7 @@ import TestPage from "./pages/TestPage";
 import SearchPage from "./pages/SearchPage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
+import Car from "./pages/Car";
 
 const Router = () => (
   <Routes>
@@ -12,6 +13,8 @@ const Router = () => (
     <Route path="/Search" Component={SearchPage} />
     <Route path="/Signup" Component={SignUpPage} />
     <Route path="/Login" Component={LoginPage} />
+    <Route path="/Car/:id" Component={Car} />
   </Routes>
 );
+
 export default Router;
