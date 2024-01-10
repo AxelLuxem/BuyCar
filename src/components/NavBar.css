@@ -1,19 +1,23 @@
 .navBarWrapper {
   display: flex;
   justify-content: center;
-  background-color: #272727;
+  background-color: #2f2f2f;
   width: 100vw;
-  padding: 10px 0 10px 0;
+  padding: 15px 0 15px 0;
 }
 
 .navLink {
+  text-wrap: wrap;
   font-size: 16px;
   text-transform: uppercase;
   padding-inline: 8px;
-  border-radius: 10px;
+  border-radius: 1px;
   padding-block: 5px;
   justify-self: center;
   text-align: center;
+  padding: 10px 10px 10px 10px;
+  margin-inline: 20px;
+  /* white-space: nowrap; */
 }
 
 .navLink:hover {

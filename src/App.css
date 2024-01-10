@@ -53,9 +53,9 @@ li {
   top: 5%;
   left: 5%;
   transform: translate(5%, 0%);
-  /* background-color: brown; */
   padding-inline: 15%;
-  padding-block: 5%;
+  margin-block: 5%;
+  padding-top: 30px;
 }
 
 .title {
@@ -63,7 +63,6 @@ li {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: 40px;
-  padding-top: 30px;
 }
 
 .subtitle {
@@ -81,18 +80,23 @@ li {
 }
 
 .button {
+  display: flex;
   background-color: cadetblue;
   border-radius: 10px;
-  padding: 15px;
   margin-top: 20px;
   margin-bottom: 30px;
-  height: 30px;
+  /* height: 30px; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px 15px 20px;
+  color: white;
 }
 
 .button:hover {
   background-color: rgb(80, 134, 136);
+  cursor: pointer;
 }
 
 .featuredWrapper {
@@ -145,7 +149,17 @@ li {
 }
 
 .searchOptionsWrapper {
-  background-color: red;
+}
+
+.searchBarWrapper {
+  padding: 10px 15px 10px 15px;
+}
+
+.searchBar {
+  border-width: 1px;
+  border-color: white;
+  width: 180px;
+  color: white;
 }
 
 .searchCardsWrapper {
@@ -156,9 +170,10 @@ li {
 
 .loginPageWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 5%;
   flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
 .inputBox {
@@ -169,4 +184,20 @@ li {
   margin-bottom: 25px;
   height: 25px;
   width: 270px;
+}
+
+.loginPageTitlewrapper {
+  margin: 0px 0px 100px 0px;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
 }

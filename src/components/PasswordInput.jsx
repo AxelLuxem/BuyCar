@@ -12,7 +12,7 @@ const icon = () => {
   }
 };
 
-const PasswordInput = () => {
+const PasswordInput = ({ value, onChange }) => {
   const [imageSource, setImageSource] = useState("");
 
   const togglePassword = () => {
@@ -35,6 +35,8 @@ const PasswordInput = () => {
         type="password"
         className="passwordInputBox"
         placeholder="Password"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
       />
       <div className="showPasswordButton" onClick={togglePassword}>
         <img src={imageSource} className="showPasswordIcon" />

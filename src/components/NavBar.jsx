@@ -1,12 +1,5 @@
 import "./NavBar.css";
 
-// const items = {
-//   Home: "/",
-//   "Buy Car": "/Search",
-//   Login: "/login",
-//   Signup: "/signup",
-// };
-
 const items = [
   {
     text: "Home",
