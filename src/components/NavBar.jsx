@@ -6,7 +6,7 @@ const items = [
     path: "/",
   },
   {
-    text: "Buy Car",
+    text: "Search",
     path: "/Search",
   },
   {
