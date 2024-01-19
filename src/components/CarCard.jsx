@@ -2,11 +2,17 @@ import "../App.css";
 import { useNavigate } from "react-router-dom";
 const path = "pictures";
 
-export const CarCard = ({ make, model, miles, price, picture, id }) => {
+export const CarCard = ({
+  make,
+  model,
+  miles,
+  price,
+  picture,
+  id,
+}) => {
   const navigate = useNavigate();
 
   const handleCarNavigation = () => {
-    console.log(`This is the id: ${id}`);
     navigate(`/Car/${id}`);
   };
 
@@ -16,7 +22,10 @@ export const CarCard = ({ make, model, miles, price, picture, id }) => {
       className="cardWrapper"
       onClick={() => handleCarNavigation()}
     >
-      <img className="cardImage" src={`${path}/${picture}`}></img>
+      <img
+        className="cardImage"
+        src={`${path}/${picture}`}
+      ></img>
       <div>
         <div className="detailsWrapper">
           <p className="carName">{`${make}, ${model}`}</p>

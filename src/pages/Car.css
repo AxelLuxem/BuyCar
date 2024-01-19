@@ -1,0 +1,80 @@
+.carPageWrapper {
+  /* background-color: red; */
+  padding: 2rem 1rem;
+}
+
+.topSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.carImageBigWrapper {
+  margin: 0rem 2.5rem;
+  width: 50rem;
+  @media (max-width: 1100px) {
+    width: 25rem;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.carImageBig {
+  object-fit: contain;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+.carDetailsWrapper {
+  display: grid;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.carDetailsWrapper p {
+  color: white;
+}
+
+.carDetailsName {
+  font-size: 2.1875rem;
+  font-weight: 600;
+}
+
+.carDetailsSpecs {
+  font-size: 0.8125rem;
+  margin-bottom: 2.5rem;
+}
+
+.priceText {
+  font-size: 2.1875rem;
+  font-weight: bold;
+}
+
+.contactSellerWrapper {
+  background-color: #303030;
+  padding: 0.625rem 2.1875rem;
+  border-radius: 0.625rem;
+  justify-self: flex-end;
+}
+
+.contactSellerText {
+  /* color: white; */
+}
+
+.contactSellerButton {
+  display: flex;
+  background-color: cadetblue;
+  border-radius: 0.625rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9375rem 1.25rem;
+  color: white;
+}
+
+.contactSellerButton:hover {
+  background-color: #508688;
+  cursor: pointer;
+}

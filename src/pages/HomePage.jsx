@@ -1,4 +1,4 @@
-import { initialData } from "../carList";
+import { carList } from "../carList";
 import { CarCard } from "../components/CarCard";
 
 const maxItems = 5;
@@ -12,8 +12,8 @@ const HomePage = () => {
           <h1 className="title">CarBuy</h1>
           <h2 className="subtitle">
             Find your perfect ride effortlessly.
-            <br /> Explore a curated selection of quality vehicles tailored to
-            your preferences.
+            <br /> Explore a curated selection of quality
+            vehicles tailored to your preferences.
           </h2>
           <button className="buttonWrapper">
             <a href="/Search" className="button">
@@ -23,7 +23,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="featuredWrapper">
-        {initialData.map((item, index) => {
+        {carList.map((item, index) => {
           if (index < maxItems) {
             return (
               <CarCard

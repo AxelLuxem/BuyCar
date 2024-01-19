@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { initialData } from "../carList";
+import { carList as initialData } from "../carList";
 import { CarCard } from "../components/CarCard";
 
 const SearchPage = () => {
