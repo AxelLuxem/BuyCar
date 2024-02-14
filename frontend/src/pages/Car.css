@@ -1,19 +1,21 @@
 .carPageWrapper {
   /* background-color: red; */
-  padding: 2rem 1rem;
+  width: 100%;
+  /* padding: 2rem 1rem; */
 }
 
 .topSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 .carImageBigWrapper {
-  margin: 0rem 2.5rem;
+  margin-right: 2.5rem;
   width: 50rem;
-  @media (max-width: 1100px) {
-    width: 25rem;
+  @media (max-width: 900px) {
+    width: 95%;
     margin-left: 0px;
     margin-right: 0px;
   }
@@ -24,12 +26,11 @@
   max-width: 800px;
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 .carDetailsWrapper {
   display: grid;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .carDetailsWrapper p {
@@ -59,7 +60,7 @@
 }
 
 .contactSellerText {
-  /* color: white; */
+  font-size: 1.1875rem;
 }
 
 .contactSellerButton {

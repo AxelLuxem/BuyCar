@@ -43,12 +43,14 @@ const SignUpPage = () => {
           value={email}
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
+          type="email"
         />
         <input
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
           className="inputBox"
           placeholder="Username"
+          type="text"
         />
         <div>
           <PasswordInput

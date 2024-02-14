@@ -14,7 +14,7 @@ const items = [
     path: "/login",
   },
   {
-    text: "Signup",
+    text: "Sign up",
     path: "/signup",
   },
 ];
