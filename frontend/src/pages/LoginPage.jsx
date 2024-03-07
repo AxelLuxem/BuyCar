@@ -30,7 +30,7 @@ const LoginPage = () => {
   return (
     <div className="loginPageWrapper">
       <div className="loginPageTitlewrapper">
-        <h1 className="title">Log in</h1>
+        <h1 className="title">Login</h1>
       </div>
       <form
         id="loginForm"
