@@ -33,19 +33,24 @@ router.post("/sign-up", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  console.log("In login");
   const { email, password } = req.body;
+
+  console.log("EMAIL:", email);
 
   const user = await userModel.findOne({ email });
   if (!user) {
     res
-      .status(404)
+      .status(401)
       .send({ message: "Email or password is incorrect" });
     return;
   }
   try {
     await user.comparePassword(password);
   } catch (error) {
-    res.status(403).send({ message: error });
+    res
+      .status(403)
+      .send({ message: "Email or password is incorrect" });
     return;
   }
   const token = generateToken(email);

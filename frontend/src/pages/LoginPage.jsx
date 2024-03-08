@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PasswordInput from "../components/PasswordInput";
+import axios from "axios";
 
 import { validateEmail } from "../helper/validateEmail";
 
@@ -8,7 +9,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     setError("");
 
@@ -18,6 +19,20 @@ const LoginPage = () => {
       !validateEmail(email.trim())
     ) {
       setError("Please enter a valid email and password");
+    } else {
+      try {
+        await axios.post(
+          "http://localhost:3000/users/login",
+          {
+            email,
+            password,
+          }
+        );
+      } catch (error) {
+        setError(error.response.data.message);
+        return;
+      }
+      console.log("OK!");
     }
   };
 
