@@ -1,5 +1,6 @@
 import "../App.css";
 import { useNavigate } from "react-router-dom";
+
 const path = "pictures";
 
 export const CarCard = ({
