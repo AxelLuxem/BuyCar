@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PasswordInput from "../components/PasswordInput";
+import axios from "axios";
 
 import { validateEmail } from "../helper/validateEmail";
 
@@ -9,16 +10,36 @@ const SignUpPage = () => {
   const [error, setError] = useState("");
   const [userName, setUserName] = useState("");
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
     setError("");
 
     if (
       !email.trim() ||
+      userName.trim() === "" ||
       !password.trim() ||
       !validateEmail(email.trim())
     ) {
       setError("Please enter a valid email and password");
+    } else {
+      try {
+        console.log("in the try catch");
+        const response = await axios.post(
+          "http://localhost:3000/users/sign-up",
+          {
+            email,
+            userName,
+            password,
+          }
+        );
+        localStorage.setItem("token", response.data.token);
+      } catch (error) {
+        console.log(
+          `catch error: ${error.response.data.message}`
+        );
+        setError(error.response.data.message);
+        return;
+      }
     }
   };
 
@@ -26,7 +47,7 @@ const SignUpPage = () => {
     if (error) {
       setError("");
     }
-  }, [email, password]);
+  }, [email, userName, password]);
 
   return (
     <div className="loginPageWrapper">

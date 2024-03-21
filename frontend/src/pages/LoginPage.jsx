@@ -21,13 +21,14 @@ const LoginPage = () => {
       setError("Please enter a valid email and password");
     } else {
       try {
-        await axios.post(
+        const response = await axios.post(
           "http://localhost:3000/users/login",
           {
             email,
             password,
           }
         );
+        localStorage.setItem("token", response.data.token);
       } catch (error) {
         setError(error.response.data.message);
         return;

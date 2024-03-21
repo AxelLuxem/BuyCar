@@ -1,15 +1,16 @@
 import express from "express";
 
-import { generateToken } from "./auth";
+import { generateToken, checkAuth } from "./auth";
 import userModel from "./userModel";
 
 const router = express.Router();
 
 router.post("/sign-up", async (req, res) => {
-  const { email, password } = req.body;
+  const { email, userName, password } = req.body;
 
   const newUser = new userModel({
     email,
+    userName,
     password,
   });
 
@@ -24,19 +25,18 @@ router.post("/sign-up", async (req, res) => {
       res
         .status(403)
         .send({ message: "This user already exists." });
+      return;
     } else {
       res
         .status(500)
         .send({ message: "Internal server error." });
+      return;
     }
   }
 });
 
 router.post("/login", async (req, res) => {
-  console.log("In login");
   const { email, password } = req.body;
-
-  console.log("EMAIL:", email);
 
   const user = await userModel.findOne({ email });
   if (!user) {
@@ -54,7 +54,7 @@ router.post("/login", async (req, res) => {
     return;
   }
   const token = generateToken(email);
-  res.send({ token });
+  res.send({ token, userName: user.userName });
 });
 
 export default router;

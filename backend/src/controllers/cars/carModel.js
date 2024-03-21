@@ -1,9 +1,13 @@
 import mongoose from "mongoose";
 
 const carSchema = new mongoose.Schema({
-  userID: {
+  email: {
     type: String,
     required: true,
+  },
+  image: {
+    required: true,
+    type: String,
   },
 });
 
