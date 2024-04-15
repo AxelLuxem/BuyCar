@@ -10,6 +10,10 @@ const items = [
     path: "/Search",
   },
   {
+    text: "Sell car",
+    path: "/Sell",
+  },
+  {
     text: "Login",
     path: "/login",
   },

@@ -1,0 +1,51 @@
+.sellCarForm {
+  display: flex;
+  margin: 30px 25px 0px 50px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formLabel {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.formInput {
+  background-color: white;
+  padding: 10px 5px;
+  border-radius: 0.3125rem;
+  height: 1.5625rem;
+  width: 16.875rem;
+  margin-bottom: 15px;
+}
+
+.formInput:user-invalid {
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+
+.fileInput {
+  color: white;
+  padding: 10px;
+}
+
+.submit {
+  background-color: cadetblue;
+  border-radius: 0.625rem;
+  margin-top: 3rem;
+  margin-bottom: 1.875rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9375rem 1.25rem;
+  color: white;
+  width: 150px;
+}
+
+.submit:hover {
+  background-color: #508688;
+  cursor: pointer;
+}

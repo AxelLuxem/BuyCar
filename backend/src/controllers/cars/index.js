@@ -5,13 +5,34 @@ import { checkAuth } from "../users/auth";
 
 const router = express.Router();
 
-router.post("/imageUpload", checkAuth, async (req, res) => {
-  const { image } = req.body;
+router.post("/createCar", checkAuth, async (req, res) => {
+  const {
+    make,
+    model,
+    year,
+    engineSize,
+    bhp,
+    doors,
+    mileage,
+    ownerAmount,
+    price,
+    imageBase64,
+  } = req.body;
+
   const { email } = res.locals;
 
   const newCar = carModel({
     email,
-    image,
+    make,
+    model,
+    year,
+    engineSize,
+    bhp,
+    doors,
+    mileage,
+    ownerAmount,
+    price,
+    imageBase64,
   });
 
   await newCar.save();
